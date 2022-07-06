@@ -22,3 +22,6 @@ The following steps were performed:
 
 
 The code for the proposed "application" is stored in a separate file, which loads the model, data provided by the user and selects the district with the lowest pollution on a given day based on the forecasts.
+
+
+The output data sets, a file with a saved model, and a test table uploaded to the application by the user are attached to the repository.
