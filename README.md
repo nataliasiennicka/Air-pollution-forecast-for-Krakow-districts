@@ -12,17 +12,35 @@ https://www.kaggle.com/datasets/datascienceairly/air-quality-data-from-extensive
 - a file with the sensor's ID and its X and Y coordinates
 
 
-##Step one: define your goals
+## Step one: define your goals
+
 ![image](https://user-images.githubusercontent.com/94246903/181913777-92eda115-9e2e-4acf-a0dc-6fccf7e65f3a.png)
 
-##Step two: Understand the data
+## Step two: Understand the data
 
 This was an important step that focused on cleaning up the data, finding out which factor would be used to determine the contamination, and how the others affected it.
 
-![image](https://user-images.githubusercontent.com/94246903/181913924-2068afe5-4cc3-4f6c-ba15-3902b2011f65.png)
+![image](https://user-images.githubusercontent.com/94246903/181914213-887264ec-4362-44c6-a1a2-0652572f07a9.png)
 
+For this project, it was decided that the target for prediction would be the PM10 indicator, for which the correlation between the features was checked.
 
+![image](https://user-images.githubusercontent.com/94246903/181914185-a09b46c9-e092-4014-8c73-5812ec21b614.png)
 
+## Step three: breakdown of data into districts of Krakow
+
+Since the problem is to determine the data in the districts, the measurement sensors were presented on the map and then the data was argregated to the districts.
+
+![image](https://user-images.githubusercontent.com/94246903/181914275-44981f03-75fc-4187-b738-5341960aa2ee.png)
+
+## Step four: Split the data into test and training sets
+An important element when dividing a set is to take into account changes in parameters over time. A ready-made function was not used for the separation, but the operation was performed manually by allocating the training set of data from March to October, and the training set - data from October to December.
+
+![image](https://user-images.githubusercontent.com/94246903/181915239-5a3b025a-e4fa-4def-a423-fbc78094f062.png)
+
+## Step five: preparation of models and their evaluation
+
+A basic tree model was created for the predictions. However, it did not give good results, so the data was enriched with the days of the week. On the basis of the new sets, subsequent models were made: tree, random forest and polynomial regression. Regression gave the best results in this comparison.
+![image](https://user-images.githubusercontent.com/94246903/181915759-23c5bd4a-ca3a-42ec-b91a-a1eb25ccff5e.png)
 
 
 The following steps were performed:
@@ -36,6 +54,11 @@ The following steps were performed:
 
 
 The code for the proposed "application" is stored in a separate file, which loads the model, data provided by the user and selects the district with the lowest pollution on a given day based on the forecasts.
+
+Design development ideas
+The models have not yet produced satisfactory results, however the design can be expanded by taking into account the location of the space measurement points. For a better understanding, it would be important to create a heat map that would show how the PM10 values are distributed in space and if there is any relationship. A good idea for refining the design would be to create a user application with an interface.
+
+![image](https://user-images.githubusercontent.com/94246903/181916539-923b0e69-81b4-40b9-8d8a-3b4e1f1cbbde.png)
 
 
 The output data sets, a file with a saved model, and a test table uploaded to the application by the user are attached to the repository.
