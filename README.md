@@ -11,7 +11,18 @@ https://www.kaggle.com/datasets/datascienceairly/air-quality-data-from-extensive
 
 - a file with the sensor's ID and its X and Y coordinates
 
+
+##Step one: define your goals
 ![image](https://user-images.githubusercontent.com/94246903/181913777-92eda115-9e2e-4acf-a0dc-6fccf7e65f3a.png)
+
+##Step two: Understand the data
+
+This was an important step that focused on cleaning up the data, finding out which factor would be used to determine the contamination, and how the others affected it.
+
+![image](https://user-images.githubusercontent.com/94246903/181913924-2068afe5-4cc3-4f6c-ba15-3902b2011f65.png)
+
+
+
 
 
 The following steps were performed:
